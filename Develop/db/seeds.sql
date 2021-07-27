@@ -7,7 +7,7 @@ VALUES
 ("Legal"),
 ("Sales");
 
-INTEGER INTO roles (title, salary, department_id)
+INSERT INTO role (title, salary, department_id)
 VALUES 
 ("Sales Lead", 50000, 4), 
 ("Sales Associate", 25000, 4), 
@@ -16,3 +16,14 @@ VALUES
 ("Lawyer", 100000, 3),
 ("Paralegal", 50000, 3),
 ("Lead Engineer", 130000, 1);
+
+
+INSERT INTO employee (first_name, last_name, role_id, manager_id)
+VALUES 
+("Sam", "Sosa", 1, NULL),
+("Abby", "Smith", 4, NULL),
+("Brittany", "Mendez", 1, 1),
+("Erick", "Brown", 5, NULL),
+("Jason", "Peters", 7, NULL),
+("Ashley", "Perez", 6, NULL),
+("Samantha", "Peterson", 6, 4);
