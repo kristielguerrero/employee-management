@@ -42,12 +42,20 @@ inquirer
       type: "list",
       message: "Which employees role do you want to update?",
       name: "employee",
-      choices: ["first, second,third"],
+      choices: [
+        "Sam Sosa",
+        "Abby Smith",
+        "Brittany Mendez",
+        "Eric Brown",
+        "Jason Peters",
+        "Ashley Perez",
+        "Samantha Peterson",
+      ],
     },
   ])
 
   .then((data) => {
-    const filename = `${data.name.toLowerCase().split(" ").join("")}.json`;
+    const filename = `${data.name}.json`;
 
     fs.writeFile(filename, JSON.stringify(data, null, "\t"), (err) =>
       err ? console.log(err) : console.log("Success!")
